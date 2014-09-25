@@ -81,7 +81,7 @@ div.aspect-wrapper:before{
 }
 
 /* The bottom case needs to be taken care of */
-.carousel-inner > .item > img {  
+.carousel-inner > .item > img {    
   position: absolute;
   top: 0;
   left: 0;
@@ -89,6 +89,11 @@ div.aspect-wrapper:before{
   height: auto; /* edit here, was 500px */
   min-height:350px;
   min-width:1050px;
+
+  /*
+  margin-left:auto;
+  margin-right:auto;
+  */
 }
 
 
