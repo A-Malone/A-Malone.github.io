@@ -51,8 +51,7 @@ div.aspect-wrapper:before{
 }
 
 /* Carousel base class */
-.carousel {
-  /*height: 500px;*/
+.carousel {  
   position:  absolute;
   top: 0;
   left: 0;
@@ -84,8 +83,8 @@ div.aspect-wrapper:before{
   position: absolute;
   top: 0;
   left: 0;
-  width: auto;
-  height: 100%; /* edit here, was 500px */
+  width: 100%;
+  height: auto; /* edit here, was 500px */
 }
 
 
