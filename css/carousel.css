@@ -38,6 +38,7 @@ body {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
+/* Maintains aspect ratio  of 3:1*/
 div.aspect-wrapper {
   position: relative;
   width: 100%;
@@ -72,19 +73,22 @@ div.aspect-wrapper:before{
 .carousel .item {
   /* height: 500px; */
   height: 100%;
-  background-color: #777;
+  background-color: #777;  
 }
 
 .carousel-inner {
   height: 100%;
 }
 
-.carousel-inner > .item > img {
+/* The bottom case needs to be taken care of */
+.carousel-inner > .item > img {  
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: auto; /* edit here, was 500px */
+  min-height:350px;
+  min-width:1050px;
 }
 
 
