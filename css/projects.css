@@ -1,0 +1,12 @@
+.image-container{
+    display: inline-block;
+    margin:5px;     
+}
+
+.row4
+{
+        vertical-align:top;
+        height:320px;
+        width:20%;
+        min-width: 200px;
+}  
