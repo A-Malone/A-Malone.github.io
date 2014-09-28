@@ -1,0 +1,65 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+Projects
+========
+
+Engineering Design
+----
+<div>
+      <div class="image-container row-large">
+        <a href="{{site.baseurl}}/projects/design/trident" class="darken bot-left">
+            <img src="{{ site.baseurl }}/assets/thumbnails/trident.png">
+        </a>
+        <h4 class="caption-title">Trident Lock</h4>
+        <p>An integrated bike lock to combat theft</p>            
+      </div>
+
+      <div class="image-container row-large">
+        <a href="{{site.baseurl}}/projects/design/bmec2014" class="darken bot-left">
+            <img src="{{ site.baseurl }}/assets/thumbnails/bmec.jpg">
+        </a>
+        <h4 class="caption-title">Biomedical Engineering Competition 2014</h4>
+        <p>A simple, low-cost, robot to perform ELISA tests</p>            
+      </div>
+</div>
+
+Coding
+-----
+
+<div>    
+      <div class="image-container row-large">
+        <a href="{{site.baseurl}}/projects/coding/psibot" class="darken bot-left">
+            <img src="{{ site.baseurl }}/assets/thumbnails/psibot.bmp">
+        </a>  
+        <h4 class="caption-title">Psibot</h4>
+        <p>A networked 2.5D platformer made as a class project</p>
+      </div>      
+</div>
+
+
+
+<!-- {% for category in site.categories %}
+  <div class="category-list">
+  <h1>
+  <a name="{{ category | first }}">{{ category | first }}</a>
+  </h1>
+    <ul class="post-list">
+    {% for posts in category %}
+      {% for post in posts limit 4%}
+        <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <p>{{ post.excerpt }}</p>
+            <a href="{{ post.url }}">Read more...</a>
+        </li>
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </div>
+{% endfor %} -->

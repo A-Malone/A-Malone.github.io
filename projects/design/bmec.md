@@ -1,0 +1,16 @@
+---
+layout: page
+title: Biomedical Engineering Competition 2014
+permalink: /projects/design/bmec2014/
+---
+
+Biomedical Engineering Competition 2014
+====
+
+This February I had the opportunity to compete in the CUBE biomedical engineering competition, in which undergraduate students were given 4 hours to come up with a solution to the problem of automating the process of distributing a sample into wells for testing. The goal of the competition was to make it easier for labs in resource poor environments to administer an enzyme-linked immunosorbent assay (ELISA), a common test used to detect HIV. As such, the system had to be fast, accurate, and reusable. My team's entry, which won second place, is pictured below.
+
+<div class="center">
+    <img src="{{ site.baseurl }}/assets/BMECrobot.jpg">
+</div>
+
+In designing our solution, we prioritized the accuracy and precision of the dispensing in order to ensure that there was no cross-contamination between samples. This was accomplished through the extensive use of rubber joiners and gears, resulting in a smooth and even distribution of the sample across the targeted wells. This accuracy was what won us second place.
