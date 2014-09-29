@@ -6,7 +6,7 @@ permalink: /projects/coding/genetic/
 
 Genetic Algorithms
 =======
-Github: [github.com/A-Malone/psi-bot](https://github.com/A-Malone/genetic-team-optimiaztion)
+Github: [github.com/A-Malone/genetic-team-optimiaztion](https://github.com/A-Malone/genetic-team-optimiaztion)
 
 In first year, one of my biggest side projects was designing genetic algorithms to solve a variety of problems. What drew me to this branch of optimization is that the computer does a lot of the work, evolving the ideal solution to the problem that it is given. The programmer need only frame the problem in a way that the desired solution is favored. This intrigued me from a biological perspective, since it is in essence using the concept of evolution on a scale that produces results in a reasonable amount of time. I had previously worked as a synthetic biology researcher, and was able to transfer my experience from that domain to understanding how these algorithms worked, and this allowed me to extend the concept to develop solutions to problems of my choosing.
 
