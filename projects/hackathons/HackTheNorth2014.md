@@ -1,0 +1,33 @@
+---
+layout: page
+title: Hackathons
+permalink: /projects/hackathons/hackthenorth2014/
+---
+
+Hack The North 2014: Stocket
+===================
+Github: [https://github.com/A-Malone/bloomberg_feed](https://github.com/A-Malone/bloomberg_feed) \\
+ChallengePost: [http://challengepost.com/software/stocket](http://challengepost.com/software/stocket)
+
+
+Hack the north was my first major Canadian hackathon, and also my first attempt at data analytics and visualization. Originally my team had been set on using the Oculus rift, however after these were lost in the mail, we had to pivot to using data visualization. Ironically, it was also the first hack I ever got to the extent I had wanted it to.
+
+The Application
+----------
+The idea behind Stocket was to track a stock in real time using the Bloomberg API, and attempt to compare this with what people were saying about the company in question on twitter. My team and I decided to use Django, since we all had extensive Python experience, and the interactive front-end was done in D3.js, which I'd used in my past summer project. My focus was mostly on the backend, pulling data from Bloomberg and analyzing tweets for content. To determine sentiment, I ended up using the NLTK natural language processing toolkit, from which I selected a Bayesian classifier. This allowed us to determing whether a tweet was positive, negative or neutral. This data was then plotted on a two-variable plot alongside the real-time stock prices from Bloomberg.
+
+<div class="center">
+    <div>
+        <img src="{{ site.baseurl }}/assets/hackathons/stocket2.png">
+        <p>Stock viewing interface for Stocket</p>
+    </div>
+</div>
+\\
+
+Results and Reception
+------
+Stocket's major downfall was that the stock market is closed on weekends, and hackathon judging usually takes place on Sundays. Bloomberg offers great historical data, so this shouldn't be an issue, however the twitter API offers no way of pulling tweets from a scpecific time period. This meant that we had great historical data, and great real-time data, but no match to analyze, so we were forced to plot real-time tweets vs old Bloomberg data, which some could argue defeats the point of the application, since no corellations can be drawn. Bloomberg, however, saw the value in the application, and even though it won no prizes, I eventually got an interview and a flight to New York out of it. I'll call that a sucess.
+
+Further Work:
+-----
+If I had more time with stocket there's a lot more I would have liked to do, especially on trend analysis stock price prediciton. At the very least it would have been nice to have been able to evaluate how accurate the predictions made were. In the end, this sense of unfinished bussiness is what lead me to work on data analysis in future hackathons, such as UofT Hacks 2015.
