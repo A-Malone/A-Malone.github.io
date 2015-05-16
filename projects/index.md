@@ -9,7 +9,9 @@ Projects
 <div>
     {% for category in site.categories %}
         {% assign name = (category | first) %}
-        {% if name != "projects" %}
+        {% if name == "projects"%}
+        {% elsif name == "blog" %}
+        {% else %}
             <h2>{{ name | capitalize }}</h2>
             <div>
             {% for posts in category %}

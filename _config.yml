@@ -21,4 +21,4 @@ markdown: kramdown
 permalink: "/:categories/:title"
 
 #Category declaration
-category-list: [coding, design, hackathons, miscelaneous]
+category-list: [blog, coding, design, hackathons, miscelaneous]
