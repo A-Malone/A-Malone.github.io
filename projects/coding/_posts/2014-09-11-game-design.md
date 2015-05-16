@@ -1,7 +1,9 @@
 ---
 layout: page
 title: PsiBot
-permalink: /projects/coding/psibot/
+desc: "A networked 2.5D platformer made as a class project"
+thumbnail: "/assets/thumbnails/psibot.bmp"
+categories : [projects, coding]
 ---
 
 PsiBot

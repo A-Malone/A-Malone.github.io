@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Truss Bridge Design
-permalink: /projects/design/trussdesign/
+desc: A pedestrian bridge designed for cost and safety
+thumbnail: /assets/thumbnails/trussdesign.jpg
 ---
 
 Truss Bridge Design

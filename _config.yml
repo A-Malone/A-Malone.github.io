@@ -16,3 +16,9 @@ paginate: 5
 
 # Build settings
 markdown: kramdown
+
+#URL settings
+permalink: "/:categories/:title"
+
+#Category declaration
+category-list: [coding, design, hackathons, miscelaneous]

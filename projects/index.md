@@ -6,7 +6,32 @@ permalink: /projects/
 
 Projects
 ========
+<div>
+    {% for category in site.categories %}
+        {% assign name = (category | first) %}
+        {% if name != "projects" %}
+            <h2>{{ name | capitalize }}</h2>
+            <div>
+            {% for posts in category %}
+                {% for post in posts %}
+                    {% if post.url %}
+                        <div class="image-container row-small">
+                            <a href="{{ post.url }}" class="darken bot-left">
+                                  <img height="200" src="{{ site.baseurl }}{{ post.thumbnail }}">
+                            </a>
+                            <h4 class="caption-title">{{ post.title }}</h4>
+                            <p>{{ post.desc }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
 
+
+<!--
 Engineering Design
 ----
 <div>
@@ -15,7 +40,7 @@ Engineering Design
             <img height="200" src="{{ site.baseurl }}/assets/thumbnails/trident.png">
         </a>
         <h4 class="caption-title">Trident Lock</h4>
-        <p>An integrated bike lock to combat theft</p>            
+        <p>An integrated bike lock to combat theft</p>
       </div>
 
       <div class="image-container row-small">
@@ -37,7 +62,7 @@ Engineering Design
 Coding
 -----
 
-<div>    
+<div>
       <div class="image-container row-small">
         <a href="{{site.baseurl}}/projects/coding/psibot" class="darken bot-left">
             <img height="200" src="{{ site.baseurl }}/assets/thumbnails/psibot.bmp">
@@ -63,8 +88,8 @@ Hackathons
             <img height="200" src="{{ site.baseurl }}/assets/hackathons/stocket1.png">
         </a>
         <h4 class="caption-title">Hack the North 2015: Stocket</h4>
-        <p>A web-app to cross-reference public sentiment and stock prices</p>            
-      </div> 
+        <p>A web-app to cross-reference public sentiment and stock prices</p>
+      </div>
 </div>
 
 More content is on it's way! Check back here for my projects from YHack 2013 and Hack the North 2014.
@@ -73,27 +98,4 @@ More content is on it's way! Check back here for my projects from YHack 2013 and
 Miscellaneous
 ----
 Content is on it's way! Check back for my blacksmithing work!
-
-
-
-<!-- {% for category in site.categories %}
-  <div class="category-list">
-  <h1>
-  <a name="{{ category | first }}">{{ category | first }}</a>
-  </h1>
-    <ul class="post-list">
-    {% for posts in category %}
-      {% for post in posts limit 4%}
-        <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-            <p>{{ post.excerpt }}</p>
-            <a href="{{ post.url }}">Read more...</a>
-        </li>
-      {% endfor %}
-    {% endfor %}
-    </ul>
-  </div>
-{% endfor %} -->
+-->

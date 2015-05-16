@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Trident Lock
-permalink: /projects/design/trident/
+desc: An integrated bike lock to combat theft
+thumbnail: /assets/thumbnails/trident.png
 ---
 
 Trident Lock
