@@ -1,0 +1,830 @@
+<!doctype html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Aidan Malone</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic'
+    rel='stylesheet' type='text/css'>
+    <style>
+        /********************************************
+        * 	reset from
+        * 	http://meyerweb.com/eric/tools/css/reset/
+        *******************************************/
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+        	margin: 0;
+        	padding: 0;
+        	border: 0;
+        	font-size: 100%;
+        	vertical-align: baseline;
+        }
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+        	display: block;
+        }
+        body {
+        	line-height: 1;
+        }
+        
+        ol, ul {
+        	list-style: none;
+        }
+        
+        
+        blockquote, q {
+        	quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+        	content: '';
+        	content: none;
+        }
+        table {
+        	border-collapse: collapse;
+        	border-spacing: 0;
+        }
+        /* Custom reset */
+        .main-summary p,
+        #publications .item,
+        #skills .item,
+        #languages .item,
+        #references .item,
+        #interests .item{
+        	margin: 0;
+        }
+        
+        
+        /****************
+        *		SMARTPHONES
+        ****************/
+        em {
+        	color: #757575;
+        }
+        p {
+        	margin: 0.5em 0;
+        }
+        blockquote {
+        	margin: 0;
+        	margin-bottom: 1em;
+        }
+        strong {
+        	font-weight: 700;
+        	font-size: 1.1em;
+        }
+        ul {
+        	margin-top: 0.5em;
+        }
+        div.item {
+        	margin: 1em 0 2em;
+        	padding-bottom: 2em;
+        }
+        div.item:last-of-type {
+        	margin: 0;
+        	border-bottom: none;
+        	padding-bottom: 0;
+        }
+        p {
+        	text-align: justify;
+        }
+        
+        
+        /* Headers */
+        h1, h2, h3, h4, h5, h6 {
+        	font-weight: 700;
+        }
+        h1 {
+        	font-size: 2.5rem;
+        }
+        h2,
+        h3 {
+        	font-size: 1rem;
+        }
+        a {
+        	color: #EB5F51;
+        	text-decoration: none;
+        }
+        a:hover {
+        	text-decoration: underline;
+        }
+        
+        /* Layout */
+        body {
+        	line-height: 1.6;
+        	font-size: 13px;
+        	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        #resume {
+        	padding: 1rem 0;
+        	margin: 1rem auto;
+        }
+        
+        #header {
+        	padding: 0 1em;
+        	margin-bottom: 1em;
+        }
+        
+        /* Header row flex */
+        #resume > header div.block {
+        	padding-left: 0.5em;
+        }
+        
+        .flex-row {
+        	display: -webkit-box; /* wkhtmltopdf uses this one */
+            display: -webkit-flex;
+        	display: flex;
+        
+        	flex-direction: row;
+        	justify-content: space-between;
+        	-webkit-justify-content: space-between;
+        }
+        
+        #resume > header div.middle {
+        	padding-top: 1.5em;
+        }
+        
+        /* Summary needs top padding */
+        section.main-summary {
+        	padding-top: 1em;
+        	border-top: 1px solid #eee;
+        }
+        
+        section > header {
+        	padding-bottom: 0.5em;
+        }
+        
+        header img {
+        	display: block;
+        	width: 10em;
+        	border-radius: 0.275em;
+        	float: right;
+        	vertical-align: middle;
+        }
+        
+        header .name {
+        	line-height: 1;
+        }
+        
+        header .label {
+        	font-size: 1.5rem;
+        	font-weight: 400;
+        	color: #757575;
+        }
+        
+        section:not(.section) {
+        	padding: .5em 1rem;
+        }
+        
+        section#references {
+        	border-bottom:none;
+        }
+        
+        section#basics {
+        	background: inherit;
+        	margin-bottom: 0;
+        }
+        
+        section#skills {
+        	padding-bottom: 0;
+        }
+        
+        section#education,
+        section#work,
+        .main-summary section {
+        	padding-bottom: 1em;
+        }
+        
+        #work .item {
+        	margin-top: 0em;
+        	padding-bottom: 0em;
+        }
+        
+        header::after {
+        	display: table;
+        	content: " ";
+        	clear: both;
+        }
+        
+        h2.section-title {
+        	text-align: left;
+        	font-size: 1rem;
+        	font-weight: 400;
+        	color: #757575;
+        	padding: 1em 1rem 0;
+        	margin-bottom: 0.1275em;
+        }
+        
+        .date {
+        	font-weight: 700;
+        	color: #757575;
+        }
+        
+        #gpa {
+        	padding-left: 1em;
+        }
+        
+        .position, .area, .institution {
+        	font-weight: 700;
+        }
+        
+        #interests .item, #languages .item {
+        	padding: 0 1em 1em 0;
+        	border-bottom: none;
+        }
+        
+        .website::before {
+        	display: inline-block;
+        	font: normal normal normal 14px/1 FontAwesome;
+        	font-size: inherit;
+        	text-rendering: auto;
+        	-webkit-font-smoothing: antialiased;
+        	-moz-osx-font-smoothing: grayscale;
+        	text-decoration: none;
+        	min-width: 1.25em;
+        	margin-right: 0.25em;
+        	text-align: center;
+        	content: '\f14c';
+        }
+        
+        #profiles, #skills, #interests, #languages {
+        	display: -webkit-box;
+        	display: -moz-box;
+        	display: -ms-flexbox;
+        	display: -webkit-flex;
+        	display: flex;
+        	-webkit-flex-flow: row wrap;
+        	flex-flow: row wrap;
+        	-webkit-justify-content: flex-start;
+        	justify-content: flex-start;
+          padding-bottom: 1em;
+        }
+        
+        #profiles, #location {
+        	box-shadow: none;
+        	padding: 0;
+        }
+        
+        #profiles .item {
+        	margin: 0;
+        	padding: 0;
+        	padding-right: 1em;
+        	border-bottom: none;
+        }
+        
+        .highlight {
+        	list-style: disc;
+        	margin-left: 1.5em;
+        }
+        
+        #interests ul {
+        	margin-top: 0.5em;
+        }
+        
+        #publications .name {
+        	font-style: italic;
+        }
+        
+        .courses li, .keywords li{
+        	display: inline-block;
+        	background: #f0f0f0;
+        	font-size: 0.9em;
+        	line-height: 1;
+        	color: #333;
+        	padding: 0.4em 0.8em;
+        	border-bottom: 1px solid #ddd;
+        	border-right: 1px solid #ddd;
+        	border-radius: 3px;
+        }
+        
+        #publications .date {
+        	font-weight: normal;
+        	color: #000;
+        }
+        
+        #skills .item {
+        	min-width: 15em;
+        	padding: 0 .5em .8em 0;
+        	border-bottom: none;
+        }
+        
+        
+        /* Skills chart */
+        #skills .level .bar {
+        	border: 1px solid #ddd;
+        	display: block;
+        	width: 10em;
+        	height: 5px;
+        	margin: 0em 0 1em 0;
+        	position: relative;
+        }
+        
+        #skills .level .bar::after {
+        	position: absolute;
+        	content: " ";
+        	top: 0;
+        	left: 0;
+        	background: black;
+        	height: 5px;
+        }
+        
+        #skills .level.beginner .bar::after {
+        	background: #EB5F51;
+        	width: 2.5em;
+        }
+        
+        #skills .level.intermediate .bar::after {
+        	background: #ffdf1f;
+        	width: 5em;
+        }
+        
+        #skills .level.advanced .bar::after {
+        	background: #59C596;
+        	width: 7.5em;
+        }
+        
+        #skills .level.master .bar::after {
+        	background: #5CB85C;
+        	width: 10em;
+        }
+        
+        #references .item {
+        	padding-left: 1em;
+        	border-left: 5px solid #EB5F51;
+        }
+        
+        /* Awards Stuff */
+        #awards
+        {
+        	justify-content: flex-start;
+        	-webkit-justify-content: flex-start;
+        
+        	flex-wrap: wrap;
+        	-webkit-flex-wrap: wrap;
+        }
+        
+        #awards > .item
+        {
+        	margin: 0em 1em 1em 0em;
+        	padding-bottom: 0;
+        	min-width: 10em;
+        }
+        
+        #awards > .item:last-of-type {
+        	border-bottom: none;
+        }
+        
+        .fa.social {
+        	margin-right: 0.25em;
+        	font-size: 1.1em;
+        }
+        
+        /* Social Media Brand Colors */
+        .google-plus {
+        	color: #dd4b39;
+        }
+        
+        .tumblr {
+        	color:#32506d;
+        }
+        
+        .foursquare {
+        	color:  #0072b1;
+        }
+        
+        .facebook {
+        	color: #3b5998;
+        }
+        
+        .linkedin {
+        	color: #007bb6;
+        }
+        
+        .pinterest {
+        	color: #cb2027;
+        }
+        
+        .dribbble {
+        	color: #ea4c89;
+        }
+        
+        .instagram {
+        	color: #517fa4;
+        }
+        
+        .twitter {
+        	color: #00aced;
+        }
+        
+        .soundcloud {
+        	color: #ff3a00;
+        }
+        
+        .wordpress {
+        	color: #21759b;
+        }
+        
+        .youtube {
+        	color: #bb0000;
+        }
+        
+        .github {
+        	color: #171515;
+        }
+        
+        .stack-overflow {
+        	color: #828386;
+        	position: relative;
+        }
+        
+        .flickr {
+        	color: #ff0084;
+        }
+        
+        .stack-overflow::after {
+        	position: absolute;
+        	left: 0;
+        	content: '\f16c';
+        	color: #f68a1f;
+        	overflow: hidden;
+        	height: 40%;
+        }
+        
+        /******************
+        *		HELPER CLASSES
+        ******************/
+        .fa {
+        	min-width: 1.25em;
+        	margin-right: 0.25em;
+        	text-align: center;
+        }
+        
+        .clear {
+        	display: table;
+        	clear: both;
+        }
+        
+        
+        /****************
+        *		TABLET
+        ****************/
+        @media screen and (min-width: 602px) {
+        
+        	body {
+        		background: #fff;
+        	}
+        	#resume {
+        		width: 550px;
+        		margin: 0 auto;
+        	}
+        	section > header > h3 {
+        		float:left;
+        	}
+        	section > header > .date {
+        		float: right;
+        		line-height: 1.3;
+        	}
+        
+        }
+        
+        
+        /****************
+        *		LAPTOP
+        ****************/
+        @media screen and (min-width: 1025px) {
+        
+        	body {
+        		background: #f2f2f2;
+        	}
+        
+        	#resume {
+        		width: 650px;
+        		padding: 3em;
+        		margin: 3em auto;
+        		background: #fff;
+        		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        	}
+        
+        	.section {
+        		display: -webkit-box;
+        		display: -moz-box;
+        		display: -ms-flexbox;
+        		display: -webkit-flex;
+        		display: flex;
+        		-webkit-flex-flow: row wrap;
+        		flex-flow: row wrap;
+        		-webkit-justify-content: space-between;
+        		justify-content: space-between;
+        		margin-bottom: 1em;
+        		margin-top: 1em;
+        		border-bottom: 1px solid #eee;
+        	}
+        
+        	.section:last-of-type {
+        		border-bottom: none;
+        		margin-bottom: 0;
+        	}
+        
+        	section > header {
+        		line-height: 1;
+        	}
+        
+        	h2.section-title {
+        		line-height: 1.1;
+        		padding-top: 0;
+        	}
+        
+        	section:not(.section) {
+        		width: 38em;
+        		padding: 0 1em 1em 0;
+        		margin-top:0;
+        		border: none;
+        	}
+        
+        	section p {
+        		margin: 0;
+        	}
+        
+        	section#basics {
+        		width: auto;
+        		padding-top: 1em;
+        		padding-left: 1em;
+        		padding-bottom: 0;
+        		border-top: 1px solid #eee;
+        		border-bottom: 1px solid #eee;
+        	}
+        
+        	#profiles .item{
+        		padding-bottom: 1em;
+        	}
+        
+        	div {
+        		padding: 0;
+        	}
+        
+        	#skills .item {
+        		padding-left:0;
+        		margin-top: 0;
+        	}
+        }
+    </style>
+    
+    <body>
+        <div id="resume">
+            <header id="header" class="flex-row">
+                <div class="block">
+                    	<h1 class="name">Aidan Malone</h1>
+
+                    	<h2 class="label">Engineering Designer</h2>
+
+                </div>
+                <div class="block">
+                    <div id="location">	<span class="fa fa-map-marker"></span>
+	<span class="address">
+									445 Osiris Drive,
+								</span>
+	<span class="city">
+									Richmond Hill,
+								</span>
+	<span class="region">
+									Ontario,
+								</span>
+	<span class="postalCode">
+									L4C 2R1
+								</span>
+
+                    </div>
+                    <div id="contact">
+                        <div class="website">	<a href="http://malonea.me">http://malonea.me</a>
+
+                        </div>
+                        <div class="email">	<span class="fa fa-envelope"></span>
+	<a href="mailto:a_s_malone@hotmail.com">a_s_malone@hotmail.com</a>
+
+                        </div>
+                        <div class="phone">	<span class="fa fa-phone-square"></span>
+(416) 520-5082</div>
+                    </div>
+                    <div id="profiles">
+                        <div class="item">	<span class="network fa fa-github github"></span>
+	<span class="username">
+									<span class="url">
+										<a href="https://github.com/A-Malone">A-Malone</a>
+									</span>
+</span>
+                        </div>
+                        <div class="item">	<span class="network fa fa-linkedin linkedin"></span>
+	<span class="username">
+									<span class="url">
+										<a href="https://ca.linkedin.com/pub/aidan-malone/7a/527/219/">Aidan Malone</a>
+									</span>
+</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="section main-summary">
+                	<h2 class='section-title'>About</h2>
+
+                <section>
+                    <p>Aidan is a 3rd year student in the Robotics option of Engineering Science
+                        at the University of Toronto. An engineering designer first, Aidan builds
+                        upwards from fundamentals to deliver elegant and efficient solutions to
+                        problems, exemplified by his work at ILead and Intel. His past projects
+                        span everything from mechanical and circuit design to machine learning
+                        and game developemnt. After hours, he spends his time playing Ultimate
+                        Frisbee and improving his blacksmithing skills.</p>
+                </section>
+            </section>
+            <section class="section">
+                	<h2 class='section-title'>Skills</h2>
+
+                <section id="skills">
+                    <div class="item">
+                        <div class="name">Core Development</div>
+                        <div class="level master">	<em>Master</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>C</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <div class="name">Data Structures</div>
+                        <div class="level advanced">	<em>Advanced</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>Spatial Indices</li>
+                            <li>Graphs</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <div class="name">Data Analysis</div>
+                        <div class="level advanced">	<em>Advanced</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>Machine Learning</li>
+                            <li>Matlab</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <div class="name">Version Control</div>
+                        <div class="level advanced">	<em>Advanced</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>Git</li>
+                            <li>Perforce</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="section">
+                	<h2 class='section-title'>Experience</h2>
+
+                <section id="work">
+                    <header>
+                        	<h3 class="name">
+								Intel Programmable Solutions Group
+							</h3>
+
+                        <div class="date">	<span class="startDate">
+									May 2015
+								</span>
+	<span class="endDate">
+									- August 2016
+								</span>
+
+                        </div>
+                    </header>
+                    <div class="item">
+                        <div class="position">Software Engineering PEY Intern</div>
+                        <div class="summary">
+                            <p>Improved the usability of FPGA CAD software and floorplanning tools, building
+                                customer visible features for the Blueprint Platform Designer and Chip
+                                Planner.</p>
+                        </div>
+                        <ul class="highlights">
+                            <li class="highlight">Designed and implemented rendering level of detail system, reducing draw
+                                time of chip resources and design elements in Chip Planner by 96%</li>
+                            <li
+                            class="highlight">Led redesign of the interface of the BluePrint platform designer</li>
+                        </ul>
+                    </div>
+                    <header>
+                        	<h3 class="name">
+								University of Toronto, ILead
+							</h3>
+
+                        <div class="date">	<span class="startDate">
+									May 2014
+								</span>
+	<span class="endDate">
+									- September 2015
+								</span>
+
+                        </div>
+                    </header>
+                    <div class="item">
+                        <div class="position">Software Development Summer Student</div>
+                        <div class="website">	<a href="http://ilead.engineering.utoronto.ca">http://ilead.engineering.utoronto.ca</a>
+
+                        </div>
+                        <div class="summary">
+                            <p>Design of a to-scale online system designed to promote the development
+                                of team skills in engineering undergraduates. This system is now used by
+                                more than a thousand students every year.</p>
+                        </div>
+                        <ul class="highlights">
+                            <li class="highlight">Collaborated with instructors to deliver an interface to help them identify
+                                potential team conflicts</li>
+                            <li class="highlight">Reduced the runtime algorithm which constructs the team graph from 8+
+                                hours to under a minute</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="section">
+                	<h2 class='section-title'>Education</h2>
+
+                <section id="education">
+                    <header>
+                        	<h3 class="institution">
+										University of Toronto
+									</h3>
+
+                        <div class="date">	<span class="startDate">
+										2013
+									</span>
+	<span class="endDate">
+										- Present
+									</span>
+
+                        </div>
+                    </header>
+                    <div class="item">
+                        <div class="studyType">Bachelor of Applied Science</div>
+                        <div class="area" style="display:inline;">	<span>Engineering Science<span>
+									</div>
+									<div id="gpa" style="display:inline;">
+										<span class="fa fa-graduation-cap"></span>
+	<span> GPA: 3.85</span>
+
+                        </div>
+                        <div>Specialization in robotics, emphasizing circuits, signal analysis, and
+                            software. Achieved dean&#x27;s list status in every semester, with a highest
+                            class ranking of 9/250 in the Winter 2014 semester</div>
+                        <ul class="courses">
+                            <li>AER372 - Control Systems</li>
+                            <li>MIE346 - Analog and Digital Electronics</li>
+                            <li>CSC411 - Machine Learning</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="section">
+                	<h2 class='section-title'>Awards</h2>
+
+                <section id="awards" class="flex-row">
+                    <div class="item">
+                        <div class="date">30 June 2015</div>
+                        <div class="title">Riot Games API Challenge, Runner-up</div>
+                        <div class="awarder">Riot Games</div>
+                    </div>
+                    <div class="item">
+                        <div class="date">17 February 2015</div>
+                        <div class="title">2015 Capital One Data Mining Cup, Top 4</div>
+                        <div class="awarder">Capital One</div>
+                    </div>
+                    <div class="item">
+                        <div class="date">8 February 2014</div>
+                        <div class="title">Biomedical Eng. Competition 2014, 2nd Place</div>
+                        <div class="awarder">Club for Biomedical Engineering, UofT</div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </body>
+
+</html>
