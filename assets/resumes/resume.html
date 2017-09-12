@@ -55,7 +55,7 @@
         		margin: 0;
         		padding: 0;
         		border: 0;
-        		font-size: 105%;
+        		font-size: 102%;
         		vertical-align: baseline;
         	}
         }
@@ -392,6 +392,18 @@
         	width: 10em;
         }
         
+        /* Project stuff */
+        #projects .item {
+        	margin-top: 0;
+        	margin-bottom: 0em;
+        	padding-bottom: 1em;
+        }
+        
+        #projects > .item:last-of-type {
+        	padding-bottom: 0em;
+        }
+        
+        /* References stuff */
         #references .item {
         	padding-left: 1em;
         	border-left: 5px solid #EB5F51;
@@ -637,7 +649,7 @@
         
         	
         	.main-summary section p {
-        		font-size: 120%;
+        		font-size: 110%;
         	}
         
         	#skills .item {		
@@ -704,7 +716,7 @@
                 	<h2 class='section-title'>About</h2>
 
                 <section>
-                    <p>Aidan is a 3rd year student in the Robotics option of Engineering Science
+                    <p>Aidan is a 4th year student in the Robotics option of Engineering Science
                         at the University of Toronto. An engineering designer first, Aidan builds
                         upwards from fundamentals to deliver elegant and efficient solutions to
                         problems, exemplified by his work at ILead and Intel. His past projects
@@ -729,7 +741,20 @@
                             <li>Java</li>
                         </ul>
                         <div style="display: block; width:15em; padding-top:0.5em;">Self-studied MIT OpenCourseWare 6.006 to gain deeper understanding of
-                            data structures and algorithms</div>
+                            data structures and algorithms.</div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Machine Learning</div>
+                        <div class="level intermediate">	<em>Intermediate</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>Tensorflow</li>
+                            <li>Primitives</li>
+                        </ul>
+                        <div style="display: block; width:15em; padding-top:0.5em;">Experience with common frameworks, and expertise in designing and implementing
+                            the underlying primitives.</div>
                     </div>
                     <div class="item">
                         <div class="name">Robotics</div>
@@ -746,20 +771,7 @@
                             as kalman filtering and PID control.</div>
                     </div>
                     <div class="item">
-                        <div class="name">Scientific Computing</div>
-                        <div class="level intermediate">	<em>Intermediate</em>
-
-                            <div class="bar"></div>
-                        </div>
-                        <ul class="keywords">
-                            <li>Machine Learning</li>
-                            <li>Matlab</li>
-                        </ul>
-                        <div style="display: block; width:15em; padding-top:0.5em;">Experience developing numerical solvers and simulators, and has experimented
-                            with CUDA.</div>
-                    </div>
-                    <div class="item">
-                        <div class="name">Version Control</div>
+                        <div class="name">Development Tools</div>
                         <div class="level advanced">	<em>Advanced</em>
 
                             <div class="bar"></div>
@@ -767,9 +779,10 @@
                         <ul class="keywords">
                             <li>Git</li>
                             <li>Perforce</li>
+                            <li>CentOS</li>
                         </ul>
-                        <div style="display: block; width:15em; padding-top:0.5em;">Has used version control in settings ranging from solo projects to enterprise
-                            software development</div>
+                        <div style="display: block; width:15em; padding-top:0.5em;">Exposure to a variety of development environments and their accompanying
+                            toolsets.</div>
                     </div>
                 </section>
             </section>
@@ -777,6 +790,36 @@
                 	<h2 class='section-title'>Experience</h2>
 
                 <section id="work">
+                    <header>
+                        	<h3 class="name">
+								Intel Programmable Solutions Group
+							</h3>
+
+                        <div class="date">	<span class="startDate">
+									May 2017
+								</span>
+	<span class="endDate">
+									- Present
+								</span>
+
+                        </div>
+                    </header>
+                    <div class="item">
+                        <div class="position">Machine Learning Intern</div>
+                        <div class="summary">
+                            <p>Research and development of Intel&#x27;s FPGA-based Deep Learning Inference
+                                Accelerator (DLIA), optimizing OpenCL machine learning primitives to improve
+                                inference throughput.</p>
+                        </div>
+                        <ul class="highlights">
+                            <li class="highlight">Developed in-depth understanding of hardware parallelization of machine
+                                learning models, and benchmarking of common network topologies for data
+                                center and automotive applications, such as GoogleNet, VGG, and SSD.</li>
+                            <li
+                            class="highlight">Reduced system resource utilization by 10% and optimized critical paths,
+                                leading to a 10% increase in inference throughput across the graph set.</li>
+                        </ul>
+                    </div>
                     <header>
                         	<h3 class="name">
 								Intel Programmable Solutions Group
@@ -800,9 +843,8 @@
                         </div>
                         <ul class="highlights">
                             <li class="highlight">Designed and implemented rendering level of detail system, reducing draw
-                                time of chip resources and design elements in Chip Planner by 96%</li>
-                            <li
-                            class="highlight">Led redesign of the user interface of the BluePrint platform designer</li>
+                                time of chip resources and design elements in Chip Planner, a design visualization
+                                tool, by 96%.</li>
                         </ul>
                     </div>
                     <header>
@@ -827,14 +869,9 @@
                         <div class="summary">
                             <p>Design of a to-scale online system designed to promote the development
                                 of team skills in engineering undergraduates. This system is now used by
-                                more than a thousand students every year.</p>
+                                more than a thousand students every year, and is in the process of expanding
+                                to serve universities across North America.</p>
                         </div>
-                        <ul class="highlights">
-                            <li class="highlight">Collaborated with instructors to deliver an interface to help them identify
-                                potential team conflicts</li>
-                            <li class="highlight">Reduced the runtime algorithm which constructs the team graph from 8+
-                                hours to under a minute</li>
-                        </ul>
                     </div>
                 </section>
             </section>
@@ -865,12 +902,13 @@
 	<span> GPA: 3.85</span>
 
                         </div>
-                        <div>Specialization in robotics, emphasizing circuits, signal analysis, and
-                            software. Achieved dean&#x27;s list status in every semester, with a highest
-                            class ranking of 9/250 in the Winter 2014 semester</div>
+                        <div>Specialization in robotics, emphasizing controls, localization, machine
+                            learning, and software. Achieved dean&#x27;s list status in every semester,
+                            with a highest class ranking of 9/250 in the Winter 2014 semester, and
+                            most recent ranking of 14/192.</div>
                         <ul class="courses">
-                            <li>CSC190: Algorithms and Data Structures</li>
                             <li>ECE253: Digital and Computer Systems</li>
+                            <li>CSC384: Algorithms and Data Structures</li>
                             <li>CSC411: Machine Learning</li>
                         </ul>
                     </div>
